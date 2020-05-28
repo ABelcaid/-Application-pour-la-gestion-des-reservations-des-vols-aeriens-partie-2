@@ -147,7 +147,7 @@ session_start();
 							</div>
 							<div class="form-group">
 								<label>Prix:</label>
-								<input type="text" name="firstname" class="form-control" required="required"/>
+								<input type="text" name="prix" class="form-control" required="required"/>
 							</div>
 							<div class="form-group">
 								<label>Staut de vol:</label>

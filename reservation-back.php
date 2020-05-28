@@ -1,6 +1,7 @@
 <?php
 
 include('dbconnection.php');
+session_start();
 
 								if(isset($_POST['add'])){
 								$nom = $_POST['nom'];
@@ -21,11 +22,13 @@ include('dbconnection.php');
 								$stmt->execute();
 
 
-								$latest_id = $conn->insert_id;  
+								$latest_id = $conn->insert_id;
+								
+								$id_user = $_SESSION["id_user"];
 								
 								$date = date('Y-m-d H:i:s');
-								$stmt = $conn->prepare("INSERT Into reservation (vol_id,passager_id,date_reservation) values(?,?,?)");
-								$stmt->bind_param("iis",$id,$latest_id,$date);
+								$stmt = $conn->prepare("INSERT Into reservation (vol_id,passager_id,id_user,date_reservation) values(?,?,?,?)");
+								$stmt->bind_param("iiis",$id,$latest_id,$id_user,$date);
 								$stmt->execute();
 
 								$latest_id_reservation = $conn->insert_id;  

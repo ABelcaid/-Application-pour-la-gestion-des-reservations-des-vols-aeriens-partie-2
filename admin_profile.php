@@ -1,8 +1,9 @@
 <?php
 
-include('dbconnection.php');
+// include('dbconnection.php');
 
-session_start();
+// session_start();
+include('usersclass.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -79,12 +80,15 @@ session_start();
           
             <?php
         $id = $_SESSION["id_user"];
+        $user = new User();
+        $res = $user -> user_show($id);
+        $row = $res->fetch_assoc();
         // echo $id;
-        $query = "SELECT * from users where id_user='$id' ";
-        $stmt = $conn->prepare($query);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $row = $result->fetch_assoc();
+        // $query = "SELECT * from users where id_user='$id' ";
+        // $stmt = $conn->prepare($query);
+        // $stmt->execute();
+        // $result = $stmt->get_result();
+        // $row = $result->fetch_assoc();
       ?>
             <div>
                 <div class="container">

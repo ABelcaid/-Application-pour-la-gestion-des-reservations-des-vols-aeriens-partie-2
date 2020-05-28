@@ -1,6 +1,7 @@
 <?php
-include('dbconnection.php');
-session_start();				
+// include('dbconnection.php');
+include('usersclass.php');
+// session_start();				
 
 ?>
 <!DOCTYPE html>
@@ -77,13 +78,16 @@ session_start();
 
 	<?php
    $id = $_SESSION["id_user"];
+   $user = new User();
+   $res = $user -> user_show($id);
+   $row = $res->fetch_assoc();
    
    
-   $query = "SELECT * from users where id_user='$id'";
-   $stmt = $conn->prepare($query);
-	$stmt->execute();
-    $result = $stmt->get_result();
-    $row = $result->fetch_assoc();
+//    $query = "SELECT * from users where id_user='$id'";
+//    $stmt = $conn->prepare($query);
+// 	$stmt->execute();
+//     $result = $stmt->get_result();
+//     $row = $result->fetch_assoc();
 
     // echo $row["email"];
     ?>
@@ -154,8 +158,42 @@ session_start();
 		</div>
 	</div>
 
+
 	<div style="height:100vh" id="historique">
 		<h1>Historique des commandes</h1>
+
+		<div>
+			<?php
+      
+        // echo $id;
+        $query = "SELECT * FROM reservation INNER JOIN users ON reservation.id_user=users.id_user";
+        $stmt = $conn->prepare($query);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        
+      ?>
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">Depart</th>
+						<th scope="col">Destinaton</th>
+						<th scope="col">More info</th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php while ($row = $result->fetch_assoc()) { ?>
+					<td><?= $row['nom']; ?></td>
+					<td><?= $row['prenom']; ?></td>
+					<td><?= $row['id']; ?></td>
+
+
+					</tr>
+					<?php } ?>
+				</tbody>
+			</table>
+		</div>
+
+
 	</div>
 
 
