@@ -159,7 +159,7 @@ include('usersclass.php');
 	</div>
 
 
-	<div style="height:100vh" id="historique">
+	<!-- <div style="height:100vh" id="historique">
 		<h1>Historique des commandes</h1>
 
 		<div>
@@ -194,7 +194,7 @@ include('usersclass.php');
 		</div>
 
 
-	</div>
+	</div> -->
 
 
 

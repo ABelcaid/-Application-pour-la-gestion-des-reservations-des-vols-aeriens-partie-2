@@ -17,7 +17,7 @@ if(ISSET($_POST['update_user_info'])){
   
   // mysqli_query($conn, "UPDATE `users` SET `nom` = '$nom', `prenom` = '$prenom', `email` = '$mail' , `password` = '$password' WHERE `id_user` = '$id'") or die(mysqli_error());
 
-  // header("location: login.php");
+  header("location: login.php");
 }
 
 

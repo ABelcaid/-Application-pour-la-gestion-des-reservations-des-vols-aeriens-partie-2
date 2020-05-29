@@ -1,6 +1,6 @@
 <?php
 include 'confirmation-back.php';
-session_start();
+// session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">

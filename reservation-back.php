@@ -1,6 +1,9 @@
 <?php
+include('passager_class.php');
+include('reservation_class.php');
 
-include('dbconnection.php');
+
+// include('dbconnection.php');
 session_start();
 
 								if(isset($_POST['add'])){
@@ -15,24 +18,20 @@ session_start();
 
 
 								$id = $_POST['id'];
-								echo $id;
+							
 
-								$stmt = $conn->prepare("INSERT Into passager (nom, prenom, age, pays, adresse, tele, email, num_passport) values(?,?,?,?,?,?,?,?)");
-								$stmt->bind_param("ssissisi", $nom, $prenom, $age, $pays, $adresse, $tele, $email, $passeport);
-								$stmt->execute();
+								$passager = new Passager();
+								$latest_id = $passager->passager_insert($nom, $prenom, $age, $pays, $adresse, $tele, $email, $passeport);
+								
 
-
-								$latest_id = $conn->insert_id;
 								
 								$id_user = $_SESSION["id_user"];
-								
 								$date = date('Y-m-d H:i:s');
-								$stmt = $conn->prepare("INSERT Into reservation (vol_id,passager_id,id_user,date_reservation) values(?,?,?,?)");
-								$stmt->bind_param("iiis",$id,$latest_id,$id_user,$date);
-								$stmt->execute();
+								
+								$reservation = new Reservation();
 
-								$latest_id_reservation = $conn->insert_id;  
-								$stmt->close();
+								$latest_id_reservation = $reservation->reservation_insert($id,$latest_id,$id_user,$date);
+								
 								
 								header("Location: confirmation.php?id=$latest_id_reservation");
 

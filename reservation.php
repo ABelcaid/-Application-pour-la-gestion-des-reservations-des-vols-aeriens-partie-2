@@ -1,7 +1,8 @@
 <?php
 // include 'reservation-back.php';
-include('dbconnection.php');
+// include('dbconnection.php');
 session_start();
+include('volsclass.php');
 
 
 ?>
@@ -89,12 +90,16 @@ session_start();
 
 								<?php
 								$id = $_GET['id'];
-								$query = "SELECT * FROM vols WHERE id=?";
-								$stmt = $conn->prepare($query);
-								$stmt->bind_param("i", $id);
-								$stmt->execute();
-								$result = $stmt->get_result();
-								$row = $result->fetch_assoc();
+								$vol = new Vol();
+								$res = $vol -> vol_show_id($id);
+								$row = $res->fetch_assoc();
+
+								// $query = "SELECT * FROM vols WHERE id=?";
+								// $stmt = $conn->prepare($query);
+								// $stmt->bind_param("i", $id);
+								// $stmt->execute();
+								// $result = $stmt->get_result();
+								
 								?>
 								<h4 class="card-title">Depart :<span style="color:blue"><?= $row['depart']; ?></span></h4>
 								<h4 class="card-title">Destination : <span style="color:blue"><?= $row['destination']; ?></span></h4>

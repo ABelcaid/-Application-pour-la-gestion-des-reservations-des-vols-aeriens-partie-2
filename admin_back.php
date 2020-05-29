@@ -1,5 +1,6 @@
 <?php
 include('volsclass.php');
+include('usersclass.php');
 // include('dbconnection.php');
 
 if(ISSET($_POST['save'])){
@@ -49,7 +50,7 @@ if(ISSET($_POST['update_admin_info'])){
    
     
     // mysqli_query($conn, "UPDATE `users` SET `nom` = '$nom', `prenom` = '$prenom', `email` = '$mail' , `password` = '$password' WHERE `id_user` = '$id'") or die(mysqli_error());
-
+    // header("location: admin.php");
     header("location: login.php");
 }
 
