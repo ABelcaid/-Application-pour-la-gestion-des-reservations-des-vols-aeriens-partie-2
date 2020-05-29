@@ -1,7 +1,7 @@
 <div class="modal fade" id="update_modal<?php echo $fetch['id']?>" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<form method="POST" action="admin_back.php">
+			<form method="POST" action="../controller/admin_back.php">
 				<div class="modal-header">
 					<h3 class="modal-title">Update User</h3>
 				</div>

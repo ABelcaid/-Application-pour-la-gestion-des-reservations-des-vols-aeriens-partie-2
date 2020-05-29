@@ -27,7 +27,7 @@ session_start();
 				$stmt->bind_param("sssss", $nom, $prenom, $mail, $password, $statut);
 				$stmt->execute();
 				
-				header("Location: login.php");
+				header("Location: ../view/login.php");
 			}
 
 		
@@ -54,11 +54,11 @@ session_start();
 
 			if ($row1 == 1 ) {
 				if ($row2["statut"] == "Admin") {
-					header("Location: admin.php");
+					header("Location: ../view/admin.php");
 					# code...
 				} else {
 					# code...
-					header("Location: index2.php");
+					header("Location: ../view/index2.php");
 					
 
 				}
@@ -66,13 +66,13 @@ session_start();
 				
 				
 			} else {
-				header("Location: index.php");
+				header("Location: ../view/index.php");
 				
 			}
 		}
 		function user_update($id,$nom, $prenom,$mail, $password) {
 			mysqli_query($this->conn, "UPDATE `users` SET `nom` = '$nom', `prenom` = '$prenom', `email` = '$mail' , `password` = '$password' WHERE `id_user` = '$id'") or die(mysqli_error());
-			header("location: login.php");
+			header("location: ../view/login.php");
 		}
 		function user_show($id) {
 

@@ -13,10 +13,10 @@
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 
 	<!-- Bootstrap -->
-	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+	<link type="text/css" rel="stylesheet" href="../public/css/bootstrap.min.css" />
 
 	<!-- Custom stlylesheet -->
-	<link type="text/css" rel="stylesheet" href="css/style.css" />
+	<link type="text/css" rel="stylesheet" href="../public/css/style.css" />
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,24 +40,22 @@
 					</div>
 					<div class="col-md-7 col-md-offset-1">
 						<div class="booking-form">
-							<form action="login-back.php" method="POST">
-								<!-- <div class="form-group">
-									<div class="form-checkbox">
-										<label for="roundtrip">
-											<input type="radio" id="roundtrip" name="flight-type">
-											<span></span>Roundtrip
-										</label>
-										<label for="one-way">
-											<input type="radio" id="one-way" name="flight-type">
-											<span></span>One way
-										</label>
-										<label for="multi-city">
-											<input type="radio" id="multi-city" name="flight-type">
-											<span></span>Multi-City
-										</label>
+							<form action="../controller/login-back.php" method="POST">
+								
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<span class="form-label">Nom</span>
+											<input class="form-control" type="text" name="nom" >
+										</div>
 									</div>
-								</div> -->
-							
+									<div class="col-md-6">
+										<div class="form-group">
+											<span class="form-label">Prenom</span>
+											<input class="form-control" type="text" name="prenom">
+										</div>
+									</div>
+								</div>
 								<div class="row">
 									<div class="col-md-6">
 										<div class="form-group">
@@ -73,9 +71,9 @@
 									</div>
 								</div>
 					
-								<p>Si vous avez déjà compte, merci de vous identifiez <span><a href="index.html">ici</a></span></p>
+								<p>vous avez déjà un compte connectez-vous <span><a href="login.php">ici</a></span></p>
 								<div class="form-btn">
-									<button  name="go2" class="submit-btn">S'identifier</button>
+									<button type="submit" name="go" class="submit-btn">S'identifier</button>
 								</div>
 							</form>
 						</div>
@@ -84,6 +82,7 @@
 			</div>
 		</div>
 	</div>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</body>
 
 </html>

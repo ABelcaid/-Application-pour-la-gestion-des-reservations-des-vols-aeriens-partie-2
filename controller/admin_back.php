@@ -1,6 +1,6 @@
 <?php
-include('volsclass.php');
-include('usersclass.php');
+include('../model/volsclass.php');
+include('../model/usersclass.php');
 // include('dbconnection.php');
 
 if(ISSET($_POST['save'])){
@@ -16,7 +16,7 @@ if(ISSET($_POST['save'])){
     
     // mysqli_query($conn, "INSERT INTO `vols` VALUES('$vdepart', '$varrivee', '$date_depart', '$npalace', '$prix', '$statut')") or die(mysqli_error());
     
-    header("location: admin.php");
+    header("location: ../view/admin.php");
 }
 
 if(ISSET($_POST['update'])){
@@ -34,7 +34,7 @@ if(ISSET($_POST['update'])){
     
     // mysqli_query($conn, "UPDATE `vols` SET `depart` = '$vdepart', `destination` = '$varrivee', `date_depart` = '$date_depart' , `num_place` = '$npalace', `prix` = '$prix'  , `statut` = '$statut' WHERE `id` = '$id'") or die(mysqli_error());
 
-    header("location: admin.php");
+    header("location: ../view/admin.php");
 }
 
 if(ISSET($_POST['update_admin_info'])){
@@ -51,7 +51,7 @@ if(ISSET($_POST['update_admin_info'])){
     
     // mysqli_query($conn, "UPDATE `users` SET `nom` = '$nom', `prenom` = '$prenom', `email` = '$mail' , `password` = '$password' WHERE `id_user` = '$id'") or die(mysqli_error());
     // header("location: admin.php");
-    header("location: login.php");
+    header("location: ../view/login.php");
 }
 
 

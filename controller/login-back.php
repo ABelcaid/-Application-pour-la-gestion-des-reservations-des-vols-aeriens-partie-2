@@ -1,7 +1,7 @@
 <?php
 
 // include('dbconnection.php');
-include('usersclass.php');
+include('../model/usersclass.php');
 
 // session_start();
 

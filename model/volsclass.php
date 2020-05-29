@@ -41,6 +41,15 @@
 			return  $result;
 				
 		}
+		function vol_show_all() {
+
+			$query = "SELECT * from vols";
+			$stmt = $this->conn->prepare($query);
+			$stmt->execute();
+			$result = $stmt->get_result();
+			return  $result;
+				
+		}
 
 
 

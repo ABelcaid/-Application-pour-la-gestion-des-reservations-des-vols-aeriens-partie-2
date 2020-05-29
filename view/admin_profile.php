@@ -3,7 +3,7 @@
 // include('dbconnection.php');
 
 // session_start();
-include('usersclass.php');
+include('../model/usersclass.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +23,7 @@ include('usersclass.php');
 
 
     <!-- Custom styles for this template -->
-    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="../public/css/simple-sidebar.css" rel="stylesheet">
 
 </head>
 
@@ -48,7 +48,11 @@ include('usersclass.php');
         <!-- Page Content -->
         <div id="page-content-wrapper">
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <?php
+include('navbar.php');
+?>
+
+            <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
                 <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -75,7 +79,7 @@ include('usersclass.php');
                         </li>
                     </ul>
                 </div>
-            </nav>
+            </nav> -->
 
           
             <?php
@@ -123,7 +127,7 @@ include('usersclass.php');
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <form method="POST" action="admin_back.php" >
+                                            <form method="POST" action="../controller/admin_back.php" >
                                                 <div class="form-group row">
                                                     <label for="username" class="col-4 col-form-label">
                                                         NOM</label>
@@ -181,7 +185,7 @@ include('usersclass.php');
             <!-- Bootstrap core JavaScript -->
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
                 integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
                 crossorigin="anonymous">
             </script>
@@ -192,7 +196,10 @@ include('usersclass.php');
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
                 integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
                 crossorigin="anonymous">
-            </script>
+            </script> -->
+            <?php
+include('script.php');
+?>
 
             <!-- Menu Toggle Script -->
             <script>

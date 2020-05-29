@@ -1,7 +1,7 @@
 <?php
-include('passager_class.php');
-include('reservation_class.php');
-include('volsclass.php');
+include('../model/passager_class.php');
+include('../model/reservation_class.php');
+include('../model/volsclass.php');
 session_start();
 
 

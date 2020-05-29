@@ -1,6 +1,6 @@
 <?php
-include('passager_class.php');
-include('reservation_class.php');
+include('../model/passager_class.php');
+include('../model/reservation_class.php');
 
 
 // include('dbconnection.php');
@@ -33,7 +33,7 @@ session_start();
 								$latest_id_reservation = $reservation->reservation_insert($id,$latest_id,$id_user,$date);
 								
 								
-								header("Location: confirmation.php?id=$latest_id_reservation");
+								header("Location: ../view/confirmation.php?id=$latest_id_reservation");
 
 								}
 								
