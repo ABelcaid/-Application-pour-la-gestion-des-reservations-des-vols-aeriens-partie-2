@@ -49,10 +49,10 @@ include('../model/usersclass.php');
         <div id="page-content-wrapper">
 
         <?php
-include('navbar.php');
+// include('navbar.php');
 ?>
 
-            <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
                 <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -79,7 +79,7 @@ include('navbar.php');
                         </li>
                     </ul>
                 </div>
-            </nav> -->
+            </nav>
 
           
             <?php

@@ -29,6 +29,20 @@
 			return  $result;
 				
 		}
+		function reservation_join() {
+
+			$query = "SELECT id,date_reservation,passager_id,vol_id FROM reservation INNER JOIN users ON reservation.id_user=users.id_user";
+			$stmt = $this->conn->prepare($query);
+			$stmt->execute();
+			$result = $stmt->get_result();
+			return  $result;
+				
+		}
+
+
+
+		
+
 
 
 

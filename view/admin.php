@@ -34,7 +34,9 @@ session_start();
 		<!-- Sidebar -->
 		<div class="bg-light border-right" id="sidebar-wrapper">
 			<div class="sidebar-heading">Sky flight </div>
+			
 			<div class="list-group list-group-flush">
+			
 				<!-- <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a> -->
 				<a href="admin.php" class="list-group-item list-group-item-action bg-light">List des vols</a>
 				<!-- <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a> -->
@@ -48,7 +50,7 @@ session_start();
 		<!-- Page Content -->
 		<div id="page-content-wrapper">
 
-			<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
         <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -74,7 +76,7 @@ session_start();
             </li>
           </ul>
         </div>
-      </nav> -->
+      </nav>
 			<?php
 // include('navbar.php');
 ?>

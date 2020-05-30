@@ -1,6 +1,7 @@
 <?php
 // include('dbconnection.php');
 include('../model/usersclass.php');
+include('../model/reservation_class.php');
 // session_start();				
 
 ?>
@@ -32,7 +33,7 @@ include('heder.php');
 ?>
 
 <body>
-<?php
+	<?php
 include('navbar.php');
 ?>
 	<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -164,43 +165,82 @@ include('navbar.php');
 	</div>
 
 
-	<!-- <div style="height:100vh" id="historique">
+	<div style="height:100vh" id="historique">
 		<h1>Historique des commandes</h1>
 
-		<div>
-			<?php
+		<!-- <div class="cont">
+			<div class="cont1">
+				<h3>hello</h3>
+				<h3>hi</h3>
+			</div>
+			<div class="cont2">
+			<p>show</p> 
+			</div>
+		</div> -->
+
+		<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">date reservation</th>
+      <th scope="col">more</th>
       
-        // echo $id;
-        $query = "SELECT * FROM reservation INNER JOIN users ON reservation.id_user=users.id_user";
-        $stmt = $conn->prepare($query);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        
-      ?>
-			<table class="table">
-				<thead>
-					<tr>
-						<th scope="col">Depart</th>
-						<th scope="col">Destinaton</th>
-						<th scope="col">More info</th>
-					</tr>
-				</thead>
-				<tbody>
-					<?php while ($row = $result->fetch_assoc()) { ?>
-					<td><?= $row['nom']; ?></td>
-					<td><?= $row['prenom']; ?></td>
+    </tr>
+  </thead>
+
+  <?php
+			$info = new Reservation();
+			$res = $info -> reservation_join();
+			// $row = $res->fetch_assoc();
+
+			// echo $row['id'];
+			
+			?> 
+  <tbody>
+
+    <tr>
+	<?php while ($row = $res->fetch_assoc()) { ?>
 					<td><?= $row['id']; ?></td>
+					<td><?= $row['date_reservation']; ?></td>
+					<td>
+					<input type="button" name="view" value="<?= $row['id']; ?>" id="<?= $row['id']; ?>"  class="btn btn-info btn-xs view_data" >
+					</td>
+				</tr>
+				<?php } ?>
+ 
+  </tbody>
+</table>
 
 
-					</tr>
-					<?php } ?>
-				</tbody>
-			</table>
+
+		<div>
+			
+      
 		</div>
 
 
-	</div> -->
+	</div>
 
+	<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="detail">
+	  
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -216,9 +256,29 @@ include('navbar.php');
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 	</script> -->
 	<?php
-include('scprit.php');
+include('script.php');
 ?>
 
 </body>
 
 </html>
+
+<script>
+
+$(document).ready(function(){  
+  $('.view_data').click(function(){  
+       var rid = $(this).attr("id");  
+       $.ajax({  
+            url:"../controller/user_back.php",  
+            method:"post",  
+            data:{rid:rid},  
+            success:function(data){  
+                 $('#detail').html(data);  
+                 $('#exampleModalCenter').modal("show");  
+            }  
+       });  
+  });  
+});
+
+</script>
+
