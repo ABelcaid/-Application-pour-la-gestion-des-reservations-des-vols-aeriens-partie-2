@@ -181,14 +181,16 @@
 	margin-top: 45px;
 }
 
-.booking-cta h1 {
+#booking-cta h1 {
 	font-size: 52px;
 	text-transform: uppercase;
 	color: #4fa3e3;
+	font-size: 33px;
 	font-weight: 400;
 }
 
-.booking-cta p {
-	font-size: 22px;
-	color: #191a1e;
+#booking-cta p {
+	color: #0775d4;
+	font-size: 17px;
+	margin: 7% 0% 7% 0%;
 }

@@ -3,7 +3,7 @@
 		<div class="modal-content">
 			<form method="POST" action="../controller/admin_back.php">
 				<div class="modal-header">
-					<h3 class="modal-title">Update User</h3>
+					<h3 class="modal-title">Modifier un vol</h3>
 				</div>
 				<div class="modal-body">
 					<div class="col-md-2"></div>
@@ -39,9 +39,9 @@
 				<div style=" clear:both;"></div>
 						<div class="modal-footer">
 							<button name="update" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span>
-								Update</button>
+							Modifier</button>
 							<button class="btn btn-danger" type="button" data-dismiss="modal"><span
-									class="glyphicon glyphicon-remove"></span> Close</button>
+									class="glyphicon glyphicon-remove"></span> Fermer</button>
 						</div>
 					</div>
 			</form>

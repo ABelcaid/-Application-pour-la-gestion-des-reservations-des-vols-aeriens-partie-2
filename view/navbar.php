@@ -8,13 +8,13 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item ">
-					<a class="nav-link" href="#">Accueil </a>
+					<a class="nav-link" href="index2.php">Accueil </a>
 				</li>
 				<li class="nav-item ">
 					<a class="nav-link" href="userinfo.php">Informations personnels</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#historique">Mes réservations</a>
+					<a class="nav-link" href="user_reservation.php">Mes réservations</a>
 				</li>
 
 			</ul>
@@ -31,7 +31,6 @@
 						<a class="dropdown-item" href="#">Statut : <samp><?= $_SESSION["statut"]; ?></samp></a>
 						<a class="dropdown-item" href="#">Je me déconnecte</a>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#">Faq</a>
 					</div>
 				</li>
 			</ul>

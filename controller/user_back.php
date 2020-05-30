@@ -46,31 +46,45 @@ if(ISSET($_POST['rid'])){
 //   $row2 = $res->fetch_assoc();
 
   $output .= '  
-  <div class="table-responsive">  
+  <div class="table-responsive"> 
+  <h3>Passage information</h3> 
        <table class="table table-bordered">';  
   while( $row2 = $res2->fetch_assoc())  
   {  
        $output .= '  
             <tr>  
-                 <td width="30%"><label>Name</label></td>  
+                 <td width="30%"><label>Nom</label></td>  
                  <td width="70%">'.$row2["nom"].'</td>  
-            </tr>  
+            </tr>
             <tr>  
-                 <td width="30%"><label>Address</label></td>  
+                 <td width="30%"><label>Prenom</label></td>  
+                 <td width="70%">'.$row2["prenom"].'</td>  
+            </tr> 
+            <tr>  
+                    <td width="30%"><label>age</label></td>  
+                    <td width="70%">'.$row2["age"].'</td>  
+            </tr>  
+             <tr>  
+                 <td width="30%"><label>Adress</label></td>  
                  <td width="70%">'.$row2["adresse"].'</td>  
-            </tr>  
+            </tr>
+           <tr>  
+                    <td width="30%"><label>Pays</label></td>  
+                    <td width="70%">'.$row2["pays"].'</td>  
+           </tr>   
             <tr>  
-                 <td width="30%"><label>mail</label></td>  
+                 <td width="30%"><label>Email</label></td>  
                  <td width="70%">'.$row2["email"].'</td>  
             </tr>  
-            <tr>  
-                 <td width="30%"><label>age</label></td>  
-                 <td width="70%">'.$row2["age"].'</td>  
-            </tr>  
+            
             <tr>  
                  <td width="30%"><label>tele</label></td>  
                  <td width="70%">'.$row2["tele"].' </td>  
-            </tr>  
+            </tr> 
+            <tr>  
+                 <td width="30%"><label>Nun Passport</label></td>  
+                 <td width="70%">'.$row2["num_passport"].' </td>  
+            </tr> 
             ';  
   }  
   $output .= "</table></div>";  
@@ -84,29 +98,30 @@ if(ISSET($_POST['rid'])){
 //   ----------------------------------------------
 $output2 .= '  
   <div class="table-responsive">  
+  <h3>Vol information</h3> 
        <table class="table table-bordered">';  
   while( $row1 = $res1->fetch_assoc())  
   {  
        $output2 .= '  
             <tr>  
-                 <td width="30%"><label>Name</label></td>  
-                 <td width="70%">'.$row1["id"].'</td>  
+                 <td width="30%"><label>Depart</label></td>  
+                 <td width="70%">'.$row1["depart"].'</td>  
             </tr>  
             <tr>  
-                 <td width="30%"><label>Address</label></td>  
-                 <td width="70%">'.$row1["id"].'</td>  
+                 <td width="30%"><label>Destination</label></td>  
+                 <td width="70%">'.$row1["destination"].'</td>  
             </tr>  
             <tr>  
-                 <td width="30%"><label>mail</label></td>  
-                 <td width="70%">'.$row1["id"].'</td>  
+                 <td width="30%"><label>Date depart</label></td>  
+                 <td width="70%">'.$row1["date_depart"].'</td>  
             </tr>  
             <tr>  
-                 <td width="30%"><label>age</label></td>  
-                 <td width="70%">'.$row1["id"].'</td>  
+                 <td width="30%"><label>Prix</label></td>  
+                 <td width="70%">'.$row1["prix"].'</td>  
             </tr>  
             <tr>  
-                 <td width="30%"><label>tele</label></td>  
-                 <td width="70%">'.$row1["id"].' </td>  
+                 <td width="30%"><label>Statut</label></td>  
+                 <td width="70%">'.$row1["statut"].' </td>  
             </tr>  
             ';  
   }  
