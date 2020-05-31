@@ -61,7 +61,7 @@ session_start();
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 								<a class="dropdown-item" href="#">Statut : <samp><?= $_SESSION["statut"]; ?></samp></a>
-								<a class="dropdown-item" href="#">Je me déconnecte</a>
+								<a class="dropdown-item" href="logout.php">Je me déconnecte</a>
 								<div class="dropdown-divider"></div>
 							</div>
 						</li>
