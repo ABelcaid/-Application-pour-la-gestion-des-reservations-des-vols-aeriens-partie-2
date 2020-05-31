@@ -1,9 +1,7 @@
 <?php
 
-// include('dbconnection.php');
 include('../model/usersclass.php');
 
-// session_start();
 
 if(isset($_POST['go'])){
 

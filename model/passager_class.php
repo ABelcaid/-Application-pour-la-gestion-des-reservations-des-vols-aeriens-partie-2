@@ -1,6 +1,4 @@
 <?php
-// include('dbconnection.php');
-// session_start();
 
 
  class Passager{

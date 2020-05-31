@@ -1,6 +1,5 @@
 <?php
-// include('dbconnection.php');
-// session_start();
+
 
 
  class Vol{
@@ -25,7 +24,7 @@
         }
 		function vol_show($villedepart,$villearrivee) {
 
-			$query = "SELECT * from vols where depart='$villedepart' AND destination='$villearrivee' AND num_place > 0";
+			$query = "SELECT * from vols where depart='$villedepart' AND destination='$villearrivee' AND num_place > 0 AND statut = 'Programme' ";
 			$stmt = $this->conn->prepare($query);
 			$stmt->execute();
 			$result = $stmt->get_result();

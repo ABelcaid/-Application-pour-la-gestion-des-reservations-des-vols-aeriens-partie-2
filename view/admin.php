@@ -195,8 +195,8 @@ session_start();
 
 
 	<?php
-include('script.php');
-?>
+	include('script.php');
+	?>
 
 	<!-- Menu Toggle Script -->
 	<script>

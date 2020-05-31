@@ -43,7 +43,7 @@
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
-											<span class="form-label">Password</span>
+											<span class="form-label">Mot de passe</span>
 											<input class="form-control" type="password" name="password">
 										</div>
 									</div>

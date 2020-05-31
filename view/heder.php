@@ -4,9 +4,7 @@
 
 	<title>Sky flight</title>
 
-	<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 
-	<script src="https://kit.fontawesome.com/c2035ffa68.js" crossorigin="anonymous"></script>
 
 
 	<link type="text/css" rel="stylesheet" href="../public/css/style.css" />

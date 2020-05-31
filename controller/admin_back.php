@@ -1,7 +1,6 @@
 <?php
 include('../model/volsclass.php');
 include('../model/usersclass.php');
-// include('dbconnection.php');
 
 if(ISSET($_POST['save'])){
     $date_depart = $_POST['date_depart'];

@@ -140,6 +140,9 @@ include('../model/usersclass.php');
 </body>
 
 </html>
+<?php
+	include('script.php');
+	?>
 <script>
     $("#menu-toggle").click(function (e) {
         e.preventDefault();

@@ -3,7 +3,6 @@ include('../model/passager_class.php');
 include('../model/reservation_class.php');
 
 
-// include('dbconnection.php');
 session_start();
 
 								if(isset($_POST['add'])){

@@ -50,8 +50,11 @@ include('navbar.php');
 					</div>
 				</div>
 			</div>
+		</section>
 	</div>
-	</section>
+
+	
+
 	<div id="booking" class="section">
 		<div class="section-center">
 			<div class="container">

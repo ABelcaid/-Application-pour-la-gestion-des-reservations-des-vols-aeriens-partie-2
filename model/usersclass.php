@@ -1,5 +1,4 @@
 <?php
-// include('dbconnection.php');
 session_start();
 
 
@@ -19,6 +18,10 @@ session_start();
 			$row1 = mysqli_num_rows($result);
 
 			if ($row1 == 1) {
+
+				// header("Location: ../view/index.php");	
+				// $_SESSION['response'] = "user already taken";
+				// $_SESSION['type']= "Danger";
 			
 				echo "user already taken";
 			} else {
@@ -89,11 +92,20 @@ session_start();
 				return  $result;
 				
 		}
+		 function log_out()
+		{
+			session_destroy();
+			unset($_SESSION['nom']);
+			unset($_SESSION['prenom']);
+			unset($_SESSION["statut"] );
+			unset($_SESSION['prenom']);
+			unset($_SESSION['prenom']);
+
+			return true;
+		}
 
 
-
-
-
+		
 
 }
 

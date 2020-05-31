@@ -1,3 +1,7 @@
+<?php
+// include('../model/usersclass.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,10 +17,20 @@
 
 </head>
 
+
 <body>
 	<div id="booking" class="section">
+
 		<div class="section-center">
+
 			<div class="container">
+				<!-- <?php if(isset($_SESSION['response'])) {?>
+				<div class="alert alert-success alert-dismissible">
+					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					<?= $_SESSION['response'];?>
+				</div>
+				<?php } ?> -->
+				<!-- <p>ffffffffff</p> -->
 				<div class="row">
 
 					<div class="col-md-7 col-md-offset-1">
@@ -51,7 +65,7 @@
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
-											<span class="form-label">Password</span>
+											<span class="form-label">Mot de passe</span>
 											<input class="form-control" type="password" name="password">
 										</div>
 									</div>

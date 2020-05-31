@@ -21,7 +21,7 @@ include('heder.php');
 			<h1>Resultats des recherches</h1>
 
 	</div>
-	<div id="booking" class="container">
+	<div id="bo" class="container">
 		<div class="row">
 			<div class="col-12">
 				<?php
