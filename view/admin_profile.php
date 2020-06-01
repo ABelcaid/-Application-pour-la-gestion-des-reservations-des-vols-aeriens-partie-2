@@ -44,8 +44,10 @@ include('../model/usersclass.php');
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                    </ul>
 
+                    <?php if (isset($_SESSION['nom']) && isset($_SESSION['prenom']) && isset($_SESSION['statut'])) {?>
+                    <ul class="navbar-nav ">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -54,23 +56,36 @@ include('../model/usersclass.php');
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="#">Statut : <samp><?= $_SESSION["statut"]; ?></samp></a>
-                                <a class="dropdown-item" href="#">Je me déconnecte</a>
+                                <a class="dropdown-item" href="logout.php">Je me déconnecte</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Faq</a>
                             </div>
                         </li>
                     </ul>
-                </div>
+                    <?php } else { ?>
+                        <ul style='margin-left: 90%;' class="navbar-nav  ">
+                        <li class="nav-item ">
+                        <a class="nav-lik " href="login.php">Login</a>
+                        </li>
+                        </ul>
+                    
+
+
+                    <?php }; ?>
             </nav>
 
 
-            <?php
-        $id = $_SESSION["id_user"];
-        $user = new User();
-        $res = $user -> user_show($id);
-        $row = $res->fetch_assoc();
-     
-      ?>
+        
+            
+
+
+            <?php if (isset($_SESSION["id_user"])) {
+			
+			$id = $_SESSION["id_user"];
+			$user = new User();
+			$res = $user -> user_show($id);
+			$row = $res->fetch_assoc(); 
+			?>
+
             <div>
                 <div class="container">
                     <div class="row">
@@ -136,7 +151,21 @@ include('../model/usersclass.php');
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> 
+
+
+
+
+
+
+		<?php }
+		?>
+
+
+
+
+
+
 </body>
 
 </html>

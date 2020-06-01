@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 // $password = ""; if you dont have any password
-$password = "belcaid";
+$password = "";
 $dbname = "gestion_reservations";
 
 // Create connection

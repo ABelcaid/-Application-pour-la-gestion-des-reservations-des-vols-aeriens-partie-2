@@ -5,7 +5,7 @@
  class Vol{
 
 		function __construct() {
-			$this->conn = new mysqli("localhost","root","belcaid","gestion_reservations");
+			$this->conn = new mysqli("localhost","root","","gestion_reservations");
 		}
 
 		function vol_insert($vdepart, $varrivee,$date_depart, $npalace,$prix,$statut) {	

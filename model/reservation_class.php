@@ -5,7 +5,7 @@
  class Reservation{
 
 		function __construct() {
-			$this->conn = new mysqli("localhost","root","belcaid","gestion_reservations");
+			$this->conn = new mysqli("localhost","root","","gestion_reservations");
 		}
 
 		function reservation_insert($id,$latest_id,$id_user,$date) {	
