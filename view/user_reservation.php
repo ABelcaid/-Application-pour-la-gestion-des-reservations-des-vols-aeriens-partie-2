@@ -28,8 +28,11 @@ include('navbar.php');
             </thead>
 
             <?php
+            
+            $id_user = $_SESSION["id_user"];
+            
 			$info = new Reservation();
-			$res = $info -> reservation_join();
+			$res = $info -> reservation_join($id_user);
 			?>
             <tbody>
                 <tr>
